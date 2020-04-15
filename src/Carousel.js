@@ -209,16 +209,24 @@ export default {
         return;
       }
 
-      this.$emit('beforeSlide', {
-        currentSlide: this.currentSlide,
-        slideTo: index
-      });
+      if (this.slideBounds.upper == this.slidesCount - 1) {
+        return;
+      }
 
       const { infiniteScroll, transition } = this.config;
       const previousSlide = this.currentSlide;
       const index = infiniteScroll
         ? slideIndex
         : getInRange(slideIndex, this.trimStart, this.slidesCount - this.trimEnd);
+
+      if (this.slidesCount - index < this.config.itemsToShow) {
+        return;
+      }
+
+      this.$emit('beforeSlide', {
+        currentSlide: this.currentSlide,
+        slideTo: index
+      });
 
       // Notify others if in a group and is the slide event initiator.
       if (this.group && isSource) {
