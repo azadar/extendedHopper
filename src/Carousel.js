@@ -107,6 +107,11 @@ export default {
     group: {
       type: String,
       default: null
+    },
+    // to enable and disable
+    enable: {
+      default: true,
+      type: Boolean
     }
   },
   data() {
@@ -192,7 +197,15 @@ export default {
   methods: {
     // controlling methods
     slideTo(slideIndex, isSource = true) {
+      if (!this.enable) {
+        return;
+      }
+
       if (this.isSliding || slideIndex === this.currentSlide) {
+        return;
+      }
+
+      if (this.config.itemsToShow < this.slidesCount) {
         return;
       }
 
