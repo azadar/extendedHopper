@@ -1,6 +1,6 @@
 {
-  "name": "hooper",
-  "version": "0.3.4",
+  "name": "extendedhopper",
+  "version": "1.0.0",
   "description": "A customizable accessible carousel slider optimized for Vue",
   "module": "dist/hooper.esm.js",
   "unpkg": "dist/hooper.js",
@@ -56,8 +56,8 @@
   "keywords": [],
   "maintainers": [
     {
-      "name": "Abdelrahman3D",
-      "email": "abdelrahman3d@gmail.com"
+      "name": "azadar",
+      "email": "azadar.h@gmail.com"
     }
   ],
   "lint-staged": {
