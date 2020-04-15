@@ -1,6 +1,6 @@
 {
   "name": "extendedhopper",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A customizable accessible carousel slider optimized for Vue",
   "module": "dist/hooper.esm.js",
   "unpkg": "dist/hooper.js",
