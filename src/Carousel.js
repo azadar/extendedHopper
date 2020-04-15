@@ -205,7 +205,7 @@ export default {
         return;
       }
 
-      if (this.config.itemsToShow < this.slidesCount) {
+      if (this.config.itemsToShow > this.slidesCount) {
         return;
       }
 
